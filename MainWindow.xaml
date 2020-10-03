@@ -1,0 +1,29 @@
+﻿<Window x:Name="form" x:Class="Terminorganisator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Terminorganisator"
+        mc:Ignorable="d"
+        Title="Terminorganisator" Height="374" Width="810" MinWidth="800" MaxWidth="810" MaxHeight="450" Closed="Mainwindow_closed">
+    <Grid Margin="0" Width="800" Height="448">
+        <ListView x:Name="lvTermine" HorizontalAlignment="Left" Margin="10,10,0,0" Height="200" Width="772" VerticalAlignment="Top">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Uhrzeit" DisplayMemberBinding="{Binding Uhrzeit}" Width="auto"/>
+                    <GridViewColumn Header="Datum" DisplayMemberBinding="{Binding Datum}" Width="auto"/>
+                    <GridViewColumn Header="Termin" DisplayMemberBinding="{Binding Termin}" Width="250
+                                    "/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="Btm_Termin_Hinzufügen" Content="Termin Hinzufügen" HorizontalAlignment="Left" Margin="10,215,0,0" VerticalAlignment="Top" Width="113" Click="Btm_Termin_Hinzufügen_Click"/>
+        <Button x:Name="Btn_Termin_Löschen" Content="Termin Löschen" HorizontalAlignment="Left" Margin="688,215,0,0" VerticalAlignment="Top" Width="94" Click="Btn_Termin_Löschen_Click"/>
+        <TextBox x:Name="Txb_Termin" HorizontalAlignment="Left" Height="37" Margin="10,290,0,0" TextWrapping="Wrap" Text="Hier Termin eingeben..." VerticalAlignment="Top" Width="772" FontFamily="Cambria" GotFocus="Txb_Termin_GotFocus" VerticalContentAlignment="Center" FontSize="20"/>
+        <DatePicker x:Name="Dp_Datum" HorizontalAlignment="Left" Margin="10,247,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="Lsbx_Stunden" HorizontalAlignment="Left" Margin="136,247,0,0" VerticalAlignment="Top" Width="55"/>
+        <ComboBox x:Name="Lsbx_Minuten" HorizontalAlignment="Left" Margin="196,247,0,0" VerticalAlignment="Top" Width="55"/>
+        <Button x:Name="Btm_AlleLöschen" Content="Alle Löschen" HorizontalAlignment="Left" Margin="608,215,0,0" VerticalAlignment="Top" Width="75" Click="Btm_AlleLöschen_Click"/>
+
+    </Grid>
+</Window>
